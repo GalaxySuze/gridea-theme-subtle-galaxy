@@ -1,0 +1,47 @@
+<header class="site-header">
+    <h1 class="site-title"><a href="<%= themeConfig.domain %>"><%= themeConfig.siteName %></a></h1>
+    <a class="sidebar-toggle"><span class="screen-reader-text">Menu</span><span class="icon" aria-hidden="true"></span></a>
+</header>
+
+<aside class="sidebar">
+    <div class="sidebar-scrollable">
+        <div class="inner">
+            <div class="widget-area">
+                <!-- 菜单 -->
+                <nav class="site-navigation">
+                    <h2><%= themeConfig.siteName %></h2>
+                    <ul class="menu">
+                        <% menus.forEach(function (menu) { %>
+                            <li class="menu-item home current-menu-item">
+                                <a href="<%= menu.link %>"
+                                <% if (menu.openType === 'External') { %>
+                                   target="_blank"
+                                        <% } %>
+                                ><%= menu.name %></a>
+                            </li>
+                        <% }); %>
+                    </ul>
+                </nav>
+
+                <section class="widget widget-about">
+                    <h2 class="widget-title">关于</h2>
+                    <p><%= themeConfig.siteDescription %></p>
+                </section>
+
+                <section class="widget widget-tags">
+                    <h2 class="widget-title">标签</h2>
+                    <div class="tagcloud">
+                        <% site.tags.forEach(function(tag) { %>
+                            <a href="<%= tag.link %>" class="button">
+                                <%= tag.name %>
+                                <span aria-hidden="true"><span class="line left"></span><span class="line top"></span><span class="line right"></span><span class="line bottom"></span></span>
+                            </a>
+                        <% }); %>
+                    </div>
+                </section>
+
+            </div>
+            <a class="sidebar-toggle"><span class="screen-reader-text">Close</span><span class="icon" aria-hidden="true"></span></a>
+        </div>
+    </div>
+</aside>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <%- include('./_blocks/head', { siteTitle: `${post.title} | ${themeConfig.siteName}` }) %>
+</head>
+<body class="post-template">
+<div id="page" class="site">
+
+    <%- include('./_blocks/header') %>
+
+    <main class="site-main">
+        <div class="site-content">
+            <article class="post tag-getting-started">
+                <header class="cover post-header">
+                    <div class="cover-bg" <% if (!post.feature) { %> style="background-image: linear-gradient( 135deg, #43CBFF 10%, #9708CC 100%);" <% } %>>
+
+                        <% if (post.feature) { %>
+                            <img srcset="<%= post.feature %> 300w, <%= post.feature %> 600w, <%= post.feature %> 800w, <%= post.feature %> 1600w, <%= post.feature %> 2000w"
+                                 sizes="100vw" src="<%= post.feature %>" alt="<%= post.title %>"/>
+                        <% } %>
+
+                    </div>
+                    <div class="cover-content">
+                        <div class="inner">
+                            <div class="post-tags">
+                                <% if (post.tags.length > 0) { %>
+                                    <% post.tags.forEach(function(tag) { %>
+                                        <a href="<%= tag.link %>"><%= tag.name %>&nbsp;&nbsp;</a>
+                                    <% }); %>
+                                <% } %>
+                            </div>
+                            <h1 class="post-title"><%= post.title %></h1>
+                            <div class="post-meta">
+                                <span class="post-meta-wrap">
+                                    <img class="author-avatar"
+                                         srcset="<%= themeConfig.domain %>/media/images/avatar.png, <%= themeConfig.domain %>/media/images/avatar.png 2x"
+                                         src="<%= themeConfig.domain %>/media/images/avatar.png" alt=""/>
+                                    <span class="post-author"><%= post.stats.words %>字</span>
+                                    <time class="published" datetime="<%= post.dateFormat %>"><%= post.dateFormat %></time>
+                                </span>
+                                <div><%= post.stats.text %></div>
+                            </div>
+                            <a href="#post-content" class="arrow-down" data-scroll><span class="screen-reader-text">Scroll Down</span></a>
+                        </div>
+                    </div>
+                </header>
+                <div class="inner">
+
+                    <div id="post-content" class="post-content">
+                        <%- post.content %>
+                    </div>
+
+                </div>
+            </article>
+
+            <%- include('./_blocks/comment') %>
+
+            <% if (post.nextPost && !post.hideInList) { %>
+                <nav class="post-navigation">
+                    <h2 class="screen-reader-text">Post navigation</h2>
+                    <div class="nav-links">
+                        <a href="<%= post.nextPost.link %>" class="nav-previous">
+                            <div class="nav-bg" <% if (!post.feature) { %> style="background-image: linear-gradient( 135deg, #43CBFF 10%, #9708CC 100%);" <% } %>>
+                                <% if (post.feature) { %>
+                                    <img srcset="<%= post.nextPost.feature %> 300w, <%= post.nextPost.feature %> 600w, <%= post.nextPost.feature %> 800w, <%= post.nextPost.feature %> 1600w, <%= post.nextPost.feature %> 2000w" sizes="(max-width: 800px) 100vw, 50vw" src="<%= post.nextPost.feature %>" alt="图裂了"/>
+                                <% } %>
+                            </div>
+                            <div class="nav-inside">
+                                <span class="nav-before">下一篇</span>
+                                <span class="nav-title"><%= post.nextPost.title %></span>
+                                <span class="nav-date"><%= post.nextPost.dateFormat %></span>
+                            </div>
+                        </a>
+                    </div>
+                </nav>
+            <% } %>
+
+        </div>
+    </main>
+
+    <%- include('./_blocks/footer') %>
+
+</div>
+
+<%- include('./_blocks/scripts') %>
+
+</body>
+</html>

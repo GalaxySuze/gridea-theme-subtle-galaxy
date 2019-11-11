@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <%- include('./_blocks/head') %>
+</head>
+<body class="home-template">
+<div id="page" class="site">
+
+    <%- include('./_blocks/header') %>
+
+    <main class="site-main">
+        <div class="site-content">
+            <!-- 封面 -->
+            <div class="cover hero">
+                <div class="cover-bg" style="background-image: linear-gradient( 135deg, #EE9AE5 10%, #5961F9 100%);">
+                    <% if (site.customConfig.homeCover) { %>
+                        <img srcset="<%= themeConfig.domain %>/media/images/<%= site.customConfig.homeCover %> 300w, <%= themeConfig.domain %>/media/images/<%= site.customConfig.homeCover %> 600w, <%= themeConfig.domain %>/media/images/<%= site.customConfig.homeCover %> 800w, <%= themeConfig.domain %>/media/images/<%= site.customConfig.homeCover %> 1600w, <%= themeConfig.domain %>/media/images/<%= site.customConfig.homeCover %> 2000w" sizes="100vw" src="<%= themeConfig.domain %>/media/images/<%= site.customConfig.homeCover %>" alt="cover"/>
+                    <% } %>
+                </div>
+                <div class="cover-content">
+                    <!-- 封面内容 -->
+                    <div class="inner">
+                        <h2 class="hero-title"><%= site.customConfig.homeTitle %></h2>
+                        <p class="hero-text"><%= site.customConfig.homeDes %></p>
+                        <a href="#post-list" class="arrow-down" data-scroll><span class="screen-reader-text">Scroll Down</span></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- post-list -->
+            <div id="post-list" class="post-list inner">
+                <% posts.forEach(function(post) { %>
+                    <article class="post">
+                        <!-- post-header -->
+                        <header class="post-header">
+                            <div class="post-tags">
+                                <% if (post.tags.length > 0) { %>
+                                    <% post.tags.forEach(function(tag) { %>
+                                        <a href="<%= tag.link %>"><%= tag.name %>&nbsp;&nbsp;</a>
+                                    <% }); %>
+                                <% } %>
+                            </div>
+                            <div class="post-header-wrap">
+                                <h2 class="post-title">
+                                    <a href="<%= post.link %>"><%= post.title %></a>
+                                </h2>
+                                <div class="post-meta">
+                                    <i class="fa fa-eye"></i>
+                                    <span class="post-author"><%= post.stats.text %></span>
+                                    <time class="published"
+                                          datetime="<%= post.dateFormat %>"><%= post.dateFormat %></time>
+                                </div>
+                            </div>
+                        </header>
+                        <!-- post-content -->
+                        <div class="post-content">
+                            <div class="read-more">
+                                <a class="button" href="<%= post.link %>">
+                                    Read More
+                                    <span aria-hidden="true"></span>
+                                    <span class="line left"></span>
+                                    <span class="line top"></span>
+                                    <span class="line right"></span>
+                                    <span class="line bottom"></span>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                <% }); %>
+            </div>
+
+            <%- include('./_blocks/pagination') %>
+
+        </div>
+    </main>
+
+    <%- include('./_blocks/footer') %>
+
+</div>
+
+<%- include('./_blocks/scripts') %>
+
+</body>
+</html>

@@ -1,0 +1,20 @@
+<footer class="site-footer">
+    <div class="inner">
+        <!-- 社交 -->
+        <div class="offsite-links">
+            <% ['github', 'twitter', 'weibo', 'zhihu', 'facebook'].forEach((item) => { %>
+                <% if (site.customConfig[item]) { %>
+                    <a href="<%= site.customConfig[item] %>" class="circle" target="_blank" rel="noopener">
+                        <i class="fab fa-<%= item %>"></i>
+                    </a>
+                <% } %>
+            <% }); %>
+        </div>
+
+        <div class="site-info">
+            THEME BY <a href="https://github.com/GalaxySuze/gridea-theme-subtle-galaxy">Subtle Galaxy</a>, REFERENCE FROM <a href="https://subtle.justgoodthemes.com/">Subtle</a><br/>
+            <%- themeConfig.footerInfo %>
+        </div>
+        <a href="#page" class="arrow-up" data-scroll><span class="screen-reader-text">Back to the top</span></a>
+    </div>
+</footer>

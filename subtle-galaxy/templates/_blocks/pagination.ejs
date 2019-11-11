@@ -1,0 +1,12 @@
+<nav class="pagination">
+    <h2 class="screen-reader-text">Posts Navigation</h2>
+    <div class="inner">
+        <span class="page-number"></span>
+        <% if (pagination.prev) { %>
+            <a class="newer-posts arrow-left" href="<%= pagination.prev %>"><span class="screen-reader-text"></span></a>
+        <% } %>
+        <% if (pagination.next) { %>
+            <a class="older-posts arrow-right" href="<%= pagination.next %>"><span class="screen-reader-text"></span></a>
+        <% } %>
+    </div>
+</nav>

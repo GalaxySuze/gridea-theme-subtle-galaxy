@@ -1,0 +1,88 @@
+{
+  "name": "Subtle Galaxy",
+  "version": "1.0.0",
+  "author": "Vick Zhang",
+  "customConfig": [
+    {
+      "name": "bgColor",
+      "label": "网页背景色",
+      "group": "布局",
+      "value": "#ffffff",
+      "type": "input",
+      "card": "color",
+      "note": "颜色字符串:（如：#EEEEEE、rgba(255, 255, 255, 0.9)）"
+    },
+    {
+      "name": "homeTitle",
+      "label": "首页标题",
+      "group": "布局",
+      "value": "Hello World",
+      "type": "input",
+      "note": "首页大标题"
+    },
+    {
+      "name": "homeDes",
+      "label": "首页介绍",
+      "group": "布局",
+      "value": "Kill Time, Or Kiss Time",
+      "type": "input",
+      "note": "首页大标题下面的介绍文字"
+    },
+    {
+      "name": "homeCover",
+      "label": "首页封面",
+      "group": "布局",
+      "value": "home-cover.jpg",
+      "type": "input",
+      "note": "首页背景封面图片,请将图片放入主题subtle/assets/media/images/目录下,填入文件名称(包括后缀)即可"
+    },
+    {
+      "name": "github",
+      "label": "Github",
+      "group": "社交",
+      "value": "",
+      "type": "input",
+      "note": "链接地址"
+    },
+    {
+      "name": "twitter",
+      "label": "Twitter",
+      "group": "社交",
+      "value": "",
+      "type": "input",
+      "note": "链接地址"
+    },
+    {
+      "name": "weibo",
+      "label": "微博",
+      "group": "社交",
+      "value": "",
+      "type": "input",
+      "note": "链接地址"
+    },
+    {
+      "name": "zhihu",
+      "label": "知乎",
+      "group": "社交",
+      "value": "",
+      "type": "input",
+      "note": "链接地址"
+    },
+    {
+      "name": "customCss",
+      "label": "自定义CSS",
+      "group": "自定义样式",
+      "value": "",
+      "type": "textarea",
+      "note": ""
+    },
+    {
+      "name": "baiduStats",
+      "label": "百度统计代码",
+      "group": "网站统计",
+      "value": "",
+      "type": "textarea",
+      "note": ""
+    }
+  ]
+}

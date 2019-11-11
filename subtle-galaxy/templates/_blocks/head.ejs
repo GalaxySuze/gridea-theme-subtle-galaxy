@@ -1,0 +1,27 @@
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title><%= themeConfig.siteName %></title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="description" content="<%= themeConfig.siteDescription %>"/>
+<meta name="keywords" content="<%= themeConfig.siteDescription %>"/>
+<link rel="shortcut icon" href="<%= themeConfig.domain %>/favicon.ico">
+<link rel="stylesheet" href="<%= themeConfig.domain %>/styles/main.css">
+
+
+<!-- Comment -->
+<% if (typeof commentSetting !== 'undefined' && commentSetting.showComment) { %>
+    <% if (commentSetting.commentPlatform === 'gitalk') { %>
+        <link href="https://cdn.bootcss.com/gitalk/1.5.0/gitalk.min.css" rel="stylesheet">
+    <% } %>
+
+    <% if (commentSetting.commentPlatform === 'disqus') { %>
+        <link rel="stylesheet" href="https://unpkg.com/disqusjs@1.1/dist/disqusjs.css"/>
+    <% } %>
+<% } %>
+
+<link href="https://cdn.bootcss.com/font-awesome/5.11.2/css/all.min.css" rel="stylesheet">
+
+<% if (site.customConfig.baiduStats) { %>
+    <!-- 百度统计 -->
+    <%- site.customConfig.baiduStats %>
+<% } %>
