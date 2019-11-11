@@ -1,6 +1,6 @@
 # Gridea Theme 「 Subtle Galaxy 」
 
-> 基于静态博客生成器[Gridea](https://gridea.dev/)的简洁现代风博客网站主题「Subtle Galaxy。原设计自Ghost Subtle主题，在此基础上增加了标签页和归档页，优化文章显示以及响应式。
+> 基于静态博客生成器[Gridea](https://gridea.dev/)的简洁现代风博客网站主题「 Subtle Galaxy 」。原设计自Ghost Subtle主题，在此基础上增加了标签页和归档页，优化文章显示以及响应式。
 > 欢迎使用本人另外自制的一个主题 [Space](https://github.com/GalaxySuze/gridea-theme-space) 
 
 ### 安装方法
