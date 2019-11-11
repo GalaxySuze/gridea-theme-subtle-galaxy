@@ -10,6 +10,13 @@
 - 在主题中选择「 Subtle Galaxy 」主题，点击保存
 - 预览查看效果
 
+### 待更新项
+- 友链页面
+- 相册页面
+- 支持评论
+- 图片懒加载
+- 优化文章页面
+
 ### 示例截图
 
 ![subtle-galaxy-1.jpg](https://i.loli.net/2019/11/11/SZz13WIsqXpEt2R.jpg)
