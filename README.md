@@ -25,4 +25,4 @@
 
 ![subtle-galaxy-4.jpg](https://github.com/GalaxySuze/gridea-theme-subtle-galaxy/raw/master/sg_03.jpg)
 
-![subtle-galaxy-2.jpg](https://github.com/GalaxySuze/gridea-theme-subtle-galaxy/raw/master/sg_03.jpg)
+![subtle-galaxy-2.jpg](https://github.com/GalaxySuze/gridea-theme-subtle-galaxy/raw/master/sg_04.jpg)
