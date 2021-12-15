@@ -19,10 +19,10 @@
 
 ### 示例截图
 
-![subtle-galaxy-1.jpg](https://i.loli.net/2019/11/11/SZz13WIsqXpEt2R.jpg)
+![subtle-galaxy-1.jpg](https://github.com/GalaxySuze/gridea-theme-subtle-galaxy/raw/master/sg_01.jpg)
 
-![subtle-galaxy-3.jpg](https://i.loli.net/2019/11/11/6hmBPADbYWe1i7a.jpg)
+![subtle-galaxy-3.jpg](https://github.com/GalaxySuze/gridea-theme-subtle-galaxy/raw/master/sg_02.jpg)
 
-![subtle-galaxy-4.jpg](https://i.loli.net/2019/11/11/oK8FEkSNI2binPr.jpg)
+![subtle-galaxy-4.jpg](https://github.com/GalaxySuze/gridea-theme-subtle-galaxy/raw/master/sg_03.jpg)
 
-![subtle-galaxy-2.jpg](https://i.loli.net/2019/11/11/5R1k3gSl2jnpD6f.jpg)
+![subtle-galaxy-2.jpg](https://github.com/GalaxySuze/gridea-theme-subtle-galaxy/raw/master/sg_03.jpg)
